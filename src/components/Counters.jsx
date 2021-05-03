@@ -9,9 +9,7 @@ const Counters = ({
 }) => {
   return (
     <div>
-      {counters.length === 0 ? (
-        ""
-      ) : (
+      {counters.length === 0 ? null : (
         <button
           onClick={() => onReset()}
           className="btn btn-primary btn-sm m-2"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import Counters from "./components/Counters";
 import NavBar from "./components/NavBar";
 
@@ -45,7 +46,7 @@ function App() {
   return (
     <>
       <NavBar totalCounters={counters.filter((c) => c.value > 0).length} />
-      <menu className="container">
+      <main className="container">
         <Counters
           counters={counters}
           onReset={handleReset}
@@ -53,7 +54,7 @@ function App() {
           onIncrement={handleIncrement}
           onDecrement={handleDecrement}
         />
-      </menu>
+      </main>
     </>
   );
 }
